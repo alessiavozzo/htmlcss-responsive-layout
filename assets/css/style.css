@@ -26,14 +26,18 @@
 
 /* #region debug */
 
-.debug #site_header{
+/* .debug #site_header{
     height: 100px;
     background-color: aqua;
-}
+} */
 
-.debug *{
+.debug #site_main *{
     border: 1px solid black;
 }
+
+
+
+/* #endregion debug */
 
 
 /* #region common rules */
@@ -43,7 +47,7 @@ body{
 }
 
 .container{
-    width: 95%;
+    width: 90%;
     margin: auto;
     max-width: 744px;
 }
@@ -56,6 +60,22 @@ body{
     list-style: none;
     gap: 1rem;
     display: none;
+    align-items: center;
+
+    & .link{
+        color: var(--bool-lighter);
+        text-decoration: none;
+    }
+
+    & a{
+        padding: 0.5rem;
+    }
+}
+
+.btn{
+    display: inline-block;    
+    text-decoration: none;
+    border-radius: 2.5rem;
 }
 
 .row{
@@ -67,6 +87,10 @@ body{
 [class^="col-"]{
     padding: 1rem;
 }
+
+
+
+/* #endregion common rules */
 
 
 /* #region utility */
@@ -92,14 +116,37 @@ body{
 }
 
 
+
+
+/* #endregion utility */
+
 /* #region header */
+
+#site_header{
+    background-color: var(--bool-secondary);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
 
 nav{
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 0;
 }
 
+.nav-right i{
+    color: var(--bool-lighter);
+    font-size: 1.3rem;
+}
 
+.btn{
+    background-color: var(--bool-lighter);
+    color: var(--bool-dark);
+}
+
+/* #endregion header */
 
 
 /* #region media query */
@@ -133,6 +180,10 @@ nav{
     
     .list-inline{
         display: flex;
+    }
+
+    .menu{
+        display: none;
     }
 
     .container{
