@@ -320,6 +320,56 @@ nav{
 /* #endregion testimonials */
 
 
+/* #region benefits */
+
+#benefits{
+    background-color: var(--bool-primary);
+    padding: 1.5rem;
+
+    & h2{
+        color: var(--bool-lighter);
+        padding: 2rem 0;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}
+
+.benefits-card{
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--bool-lighter);
+    color: var(--bool-dark);
+    border-radius: 1.3rem;
+
+    & > h3, h4{
+        color: var(--bool-primary);
+        font-weight: 700;
+    }
+
+    & h3{
+        font-size: 2.8rem;
+    }
+
+    & h4{
+        font-size: 1.8rem;
+    }
+
+    .btn{
+        background-color: var(--bool-primary);
+        color: var(--bool-lighter);
+        width: 50%;
+        padding: 0.5rem;
+        text-align: center;
+    }
+}
+
+/* #endregion benefits */
+
+
+/* #region about-us */
+
+
 
 /* #region media query */
 
