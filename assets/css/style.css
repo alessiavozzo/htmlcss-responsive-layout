@@ -31,7 +31,11 @@
     background-color: aqua;
 } */
 
-.debug #site_main *{
+/* .debug #demo *{
+    border: 1px solid black;
+} */
+
+.debug #strategy *{
     border: 1px solid black;
 }
 
@@ -149,6 +153,76 @@ nav{
 /* #endregion header */
 
 
+/* #region demo */
+
+#demo{
+    background-color: var(--bool-lighter);
+    margin-top: 5rem;
+}
+
+.card{
+    background-color: var(--bool-secondary-light);
+    flex-wrap: wrap;
+    border-radius: 1.3rem;
+    padding: 1.8rem 1.8rem 0 1.8rem;
+    gap: 1.7rem;
+}
+
+.top-card{
+    flex-direction: column;
+    gap: 1.7rem;
+
+    & h2{
+        color: var(--bool-secondary);
+    }
+
+    .text{
+        font-weight: 700;
+        color: var(--bool-dark);
+    }
+
+    .btn{
+        width: 75%;
+        background-color: var(--bool-secondary);
+        color: var(--bool-lighter);
+        font-weight: 700;
+        font-size: 1.2rem;
+        padding: 0.4rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+}
+
+.little {
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 1.8rem;
+
+    & i{
+    color: var(--bool-secondary);
+    font-size: 4.2rem;
+    }
+
+    .text{
+        font-weight: 700;
+        color: var(--bool-dark);
+    }
+}
+
+.bottom-card{
+
+    & img{
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+        margin-bottom: -0.5rem;;
+    }
+}
+
+/* #endregion demo */
+
 /* #region media query */
 
 @media screen and (min-width: 768px) {
@@ -200,6 +274,10 @@ nav{
 
     .container-small{
         width: 60%;
+    }
+
+    #demo .card{
+        flex-wrap: nowrap;
     }
 
 }
