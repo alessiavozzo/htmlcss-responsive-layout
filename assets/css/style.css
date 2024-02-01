@@ -24,6 +24,17 @@
 /* #endregion color palette */
 
 
+/* #region debug */
+
+.debug #site_header{
+    height: 100px;
+    background-color: aqua;
+}
+
+.debug *{
+    border: 1px solid black;
+}
+
 
 /* #region common rules */
 
@@ -31,9 +42,61 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+.container{
+    width: 95%;
+    margin: auto;
+    max-width: 744px;
+}
+
+.list-inline{
+    list-style: none;
+    gap: 1rem;
+    display: none;
+}
+
 
 /* #region utility */
+
+.d-flex{
+    display: flex;
+}
+
+.col-12{
+    width: 100%;
+}
+
+.col-8{
+    width: calc((100% / 12) * 8);
+}
+
+.col-6{
+    width: 50%;
+}
+
+.col-4{
+    width: calc((100% / 12) * 4);
+}
+
+
+/* #region header */
+
+nav{
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 
 
 /* #region media query */
+
+@media screen and (min-width: 768px) {
+    
+}
+
+
+@media screen and (min-width: 992px) {
+    .list-inline{
+        display: flex;
+    }
+}
