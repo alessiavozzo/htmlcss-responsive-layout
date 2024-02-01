@@ -324,12 +324,12 @@ nav{
 
 #benefits{
     background-color: var(--bool-primary);
-    padding: 1.5rem;
+    padding: 1.5rem 0;
 
     & h2{
         color: var(--bool-lighter);
         padding: 2rem 0;
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         text-align: center;
     }
 }
@@ -369,9 +369,129 @@ nav{
 
 /* #region about-us */
 
+#about-us{
+    background-color: var(--bool-lighter);
+    padding: 2.8rem 0;
+}
+
+#about-us .text{
+    flex-direction: column;
+    gap: 1.8rem;
+    padding-bottom: 1.5rem;
+
+    & h2{
+        color: var(--bool-primary);
+        font-size: 3rem;
+    }
+}
+
+.find-me .image{
+    width: 60%;
+    position: relative;
+
+    & img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    }    
+
+    & i{
+        position: absolute;
+        font-size: 4rem;
+        top: 0;
+        right: 0.5rem;
+        color: var(--bool-primary);
+    }
+}
+
+
+.find-me{
+    flex-direction: column;
+    gap: 1.5rem;
+
+    & > p{
+    font-size: 1.8rem;
+    color: var(--bool-primary);
+    }
+
+    .btn{
+        width: 60%;
+        background-color: var(--bool-primary);
+        color: var(--bool-lighter);
+        padding: 0.5rem;
+        text-align: center;
+    }
+}
+
+/* #endregion about-us */
+
+
+/* #region free-beta */
+
+#free-beta{
+    background-color: var(--bool-primary);
+    padding: 1.5rem;
+}
+
+#free-beta .container-small{
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    color: var(--bool-lighter);
+    padding: 1.5rem;
+
+    & h3{
+        font-size: 2rem;
+    }
+
+    & h2{
+        color: var(--bool-accent);
+        font-size: 3.5rem;
+    }
+
+    .btn{
+        width: 80%;
+        align-self: center;
+        padding: 1.7rem;
+        color: var(--bool-primary);
+        font-weight: 700;
+    }
+
+    .link{
+        color: var(--bool-lighter);
+    }
+}
+
+/* #endregion free-beta */
+
+
+/* #region footer */
+
+#site_footer{
+    background-color: var(--bool-dark);
+    color: var(--bool-lighter);
+    padding: 2rem 0;
+}
+
+#site_footer .container-small{
+    flex-direction: column;
+    gap: 4.5rem;
+    text-align: center;
+
+    & .link{
+        color: var(--bool-primary);
+    }
+}
+
+
+
 
 
 /* #region media query */
+
+/* 768-992 */
 
 @media screen and (min-width: 768px) {
 
@@ -387,12 +507,16 @@ nav{
         width: 50%;
     }
 
+    .col-sm-5{
+        width: calc((100% / 12) * 5);
+    }
+
     .col-sm-4{
         width: calc((100% / 12) * 4);
     }
 
     .container-small{
-        width: 80%;
+        width: 75%;
         margin: auto;
     }
 
@@ -402,8 +526,37 @@ nav{
         text-align: left;
     }
 
+    .row:has(.find-me){
+        justify-content: space-between;
+    }
+
+    .find-me{
+
+        padding: 1.5rem;
+
+        & > p{
+            font-size: 1.6rem;
+        }
+
+        & > .btn{
+            width: 80%;
+        }
+
+        & .image > i{
+            font-size: 2.8rem;
+        }
+        
+    }
+
+   
+    .find-me > .image{
+        text-align: center;
+
+    }
 }
 
+
+/* 992-1200+ */
 
 @media screen and (min-width: 992px) {
     
@@ -419,6 +572,10 @@ nav{
         max-width: 1176px;
     }
 
+    .col-lg-8{
+        width: calc((100% / 12) * 8);
+    }
+
     .col-lg-6{
         width: 50%;
     }
@@ -428,7 +585,7 @@ nav{
     }
 
     .container-small{
-        width: 60%;
+        width: 50%;
     }
 
     #demo .card{
@@ -439,8 +596,7 @@ nav{
         padding: 0 5rem;
     }
 
-    .development{
-        align-self: ;        
+    .development{        
     
         & .image{
             width: 70%;
@@ -449,11 +605,23 @@ nav{
     }
 
     .planning img{
-            padding: 1rem 2rem 4rem 2rem;
+        padding: 1rem 2rem 4rem 2rem;
         }
     
     .col-lg-6:has(.development){
         align-self: end;
     }
 
+    #about-us .col-lg-8{
+        padding: 2.5rem;
+    }
+
+    .find-me{
+        padding: 2.5rem;
+    }
+
 }
+
+
+
+/* #endregion media query */
