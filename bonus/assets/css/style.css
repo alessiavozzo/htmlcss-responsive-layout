@@ -43,6 +43,16 @@
 
 /* #region common rules */
 
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.list-inline{
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+}
+
 
 
 
@@ -56,6 +66,22 @@
 
 
 
+/* #region header */
+
+#site_header{
+    background-color: var(--bool-lighter);
+}
+
+#navbar{
+    width: 95%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+
+    & .nav-center{
+        display: none;
+    }
+}
 
 
 
@@ -73,6 +99,18 @@
 
 /* 940+ */
 
-@media screen and(min-width: 940px) {
+@media screen and (min-width: 940px) {
+
+    #navbar{
+        width: 90%;
+
+        & .nav-center{
+            display: flex;
+        }
+
+        & .nav-right > i{
+            display: none;
+        }
+    }
     
 }
