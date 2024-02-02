@@ -43,6 +43,10 @@
     margin: 1rem 0;
 }
 
+.debug .reason{
+    background-color: lightpink;
+}
+
 
 /* #endregion debug */
 
@@ -249,6 +253,10 @@ body{
 
     .col-lg-8{
         width: calc((100% / 12) * 8);
+    }
+
+    .col-lg-6{
+        width: 50%;
     }
 
     .col-lg-4{
