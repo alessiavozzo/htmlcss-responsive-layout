@@ -212,6 +212,39 @@ body{
     justify-content: center;
 }
 
+/* #endregion experiences */
+
+/* #region why-us */
+
+
+
+/* #endregion why-us */
+
+
+/* #region moving banner */
+
+#moving-banner{
+    background-color: var(--bool-banner);
+}
+
+.moving-text{
+    animation: 6s linear infinite;
+    animation-name: slide;
+
+    & > p{
+        white-space: nowrap;
+    }
+}
+
+@keyframes slide {
+    from {transform: translateX(100%);}
+
+    to {transform: translateX(-100%);}
+}
+
+/* #endregion moving banner */
+
+
 
 
 
