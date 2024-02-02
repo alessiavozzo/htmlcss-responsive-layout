@@ -1,0 +1,78 @@
+
+/* #region reset */
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* #endregion reset */
+
+
+/* #region color palette */
+
+:root{
+    --bool-lighter: rgba(255, 255, 255, 1);
+    --bool-jumbo: rgba(245, 247, 254, 1);
+    --bool-light: rgba(235, 239, 253, 1);
+    --bool-darker: black;
+    --bool-title: rgba(11, 11, 204, 1);
+    --bool-btn-light: rgba(53, 53, 236, 1);
+    --bool-btn-dark: rgba(0, 22, 50, 1);
+    --bool-banner: rgba(106, 121, 255, 1);
+    --bool-footer: rgba(19, 42, 71, 1);
+
+}
+
+/* #endregion color palette */
+
+
+/* #region debug */
+
+.debug *{
+    border: 1px solid black;
+}
+
+
+
+/* #endregion debug */
+
+
+
+/* #region common rules */
+
+
+
+
+/* #region utility */
+
+.d-flex{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* #region media query */
+
+/* 576-940 */
+
+@media screen and (min-width: 576px) {
+    
+}
+
+
+/* 940+ */
+
+@media screen and(min-width: 940px) {
+    
+}
