@@ -71,11 +71,14 @@ body{
 .row{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 [class^="col-"]{
     padding: 1rem;
 }
+
+/* #endregion common rules */
 
 
 /* #region utility */
@@ -100,6 +103,8 @@ body{
     width: calc((100% / 12) * 4);
 }
 
+/* #endregion utility */
+
 
 
 /* #region header */
@@ -118,6 +123,8 @@ body{
         display: none;
     }
 }
+
+/* #endregion header */
 
 
 /* #region jumbo */
@@ -140,6 +147,7 @@ body{
     flex-wrap: wrap;
 }
 
+/* #endregion jumbo */
 
 
 /* #region courses */
@@ -152,6 +160,27 @@ body{
     flex-direction: column;
 }
 
+
+/* #endregion courses */
+
+
+/* #region advisors */
+
+#advisors{
+    background-color: var(--bool-banner);
+}
+
+.top-adv{
+    flex-direction: column;
+}
+
+.bottom-adv{
+    flex-direction: column;
+
+    & .contacts{
+        flex-direction: column;
+    }
+}
 
 
 
@@ -194,6 +223,9 @@ body{
         width: calc((100% / 12) * 4);
     }
 
+
+    /* jumbo */
+
     .top-jumbo{
         flex-direction: row-reverse;
     }
@@ -203,10 +235,26 @@ body{
     }
 
 
-
+    /* courses */
     .find-more{
         flex-direction: row;
         justify-content: space-between;
     }
 
+
+
+
+    /* advisors */
+
+    .top-adv{
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .bottom-adv .contacts{
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
 }
