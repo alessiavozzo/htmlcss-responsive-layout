@@ -35,6 +35,13 @@
     border: 1px solid black;
 }
 
+.debug section{
+    margin: 2rem 0;
+}
+.debug .course-card{
+    background-color: lightcyan;
+    margin: 1rem 0;
+}
 
 
 /* #endregion debug */
@@ -59,6 +66,11 @@ body{
     max-width: 576px;
     margin: auto;
     display: flex;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 [class^="col-"]{
@@ -130,6 +142,18 @@ body{
 
 
 
+/* #region courses */
+
+.course-card{
+    flex-wrap: wrap;
+}
+
+.find-more{
+    flex-direction: column;
+}
+
+
+
 
 /* #region media query */
 
@@ -175,6 +199,13 @@ body{
     }
 
     .bottom-jumbo{
+        justify-content: space-between;
+    }
+
+
+
+    .find-more{
+        flex-direction: row;
         justify-content: space-between;
     }
 
