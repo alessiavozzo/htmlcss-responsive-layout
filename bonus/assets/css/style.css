@@ -48,6 +48,8 @@
 }
 
 
+
+
 /* #endregion debug */
 
 
@@ -69,7 +71,6 @@ body{
     padding: 0 0.75rem;
     max-width: 576px;
     margin: auto;
-    display: flex;
 }
 
 .row{
@@ -78,9 +79,12 @@ body{
     width: 100%;
 }
 
-[class^="col-"]{
+/* [class^="col-"]{
     padding: 1rem;
-}
+} */
+
+
+
 
 /* #endregion common rules */
 
@@ -199,7 +203,7 @@ body{
     width: calc(100% / 6);
     aspect-ratio: 4/5;
 
-    & iframe{
+    & > iframe{
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -227,7 +231,7 @@ body{
     background-color: var(--bool-banner);
 }
 
-.moving-text{
+/* .moving-text{
     animation: 6s linear infinite;
     animation-name: slide;
 
@@ -240,9 +244,49 @@ body{
     from {transform: translateX(100%);}
 
     to {transform: translateX(-100%);}
-}
+} */
+
+
+
 
 /* #endregion moving banner */
+
+/* #region fundamentals camp */
+
+
+/* #endregion fundamentals camp */
+
+
+/* #region pick-a-course */
+
+
+
+/* #endregion pick-a-course */
+
+
+/* #region footer */
+
+.footer-top{
+    width: 100%;
+}
+
+.more-info{
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    & ul{
+        display: none;
+    }
+}
+
+.social{
+    flex-direction: column;
+    align-items: center;
+
+    & .eng-bool{
+        display: none;
+    }
+}
 
 
 
@@ -253,6 +297,11 @@ body{
 /* 576-940 */
 
 @media screen and (min-width: 576px) {
+
+
+    .col-sm-6{
+        width: 50%;
+    }
 
     .buttons{
         width: 70%;
@@ -339,6 +388,36 @@ body{
         width: 95%;
     }
 
+
+
+    /* footer */
+
+    .more-info{
+        flex-direction: row;
+    
+        & ul{
+            display: block;
+        }
+    }
+
+    .social{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    
+        & .eng-bool{
+            display: block;
+        }
+    }
+
+    .footer-bottom{
+        display: flex;
+
+        & .eng-bool{
+        display: none;
+        }
+    }
+    
+    
 
 
 }
