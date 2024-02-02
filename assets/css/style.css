@@ -676,6 +676,10 @@ nav{
         align-self: end;
     }
 
+    .testimonial-card .image{
+        width: 50%;
+    }
+
     .title h2{
         font-size: 3.3rem;
     }
