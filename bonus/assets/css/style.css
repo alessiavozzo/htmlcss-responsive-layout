@@ -57,9 +57,9 @@
     border: 1px solid black;
 }
  */
-.debug #advisors *{
+/* .debug #advisors *{
     border: 1px solid black;
-}
+} */
 .debug #experiences *{
     border: 1px solid black;
 }
@@ -431,17 +431,60 @@ body{
 
 #advisors{
     background-color: var(--bool-banner);
+    padding: 1.5rem 0;
 }
 
 .top-adv{
     flex-direction: column;
+    color: var(--bool-lighter);
+    text-align: center;
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+
+    & h3{
+        font-size: x-large;
+    }
+
+    & .circle-pics{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+
+        & > img{
+            width: 50px;
+            border: 2px solid var(--bool-banner);
+        }
+
+        & > img:not(:first-child){
+            margin-left: -0.7rem;            
+        }
+    }
 }
 
 .bottom-adv{
     flex-direction: column;
+    color: var(--bool-lighter);
 
     & .contacts{
         flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+
+        & > span{
+            font-size: 0.8rem;
+        }
+    }
+
+    & .link{
+        color: var(--bool-accent);
+        text-decoration: none;
+        font-size: 1.5rem;
+
+        & > span{
+            text-decoration: underline;
+            font-weight: 600;
+        }
     }
 }
 
@@ -704,22 +747,33 @@ body{
         justify-content: space-between;
     }
 
-
-
-
-
     /* advisors */
 
     .top-adv{
         flex-direction: row;
         justify-content: center;
         gap: 1rem;
+        font-size: larger;
+
+        & h3{
+            order: -1;
+            align-self: center;
+            font-size: 2.5rem;
+        }
     }
 
     .bottom-adv .contacts{
         flex-direction: row;
         justify-content: center;
         gap: 1rem;
+        
+        & .link{
+            font-size: xx-large;
+        }
+
+        & > span{
+            font-size: large;
+        }
     }
 
 
