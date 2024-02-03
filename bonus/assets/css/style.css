@@ -318,10 +318,14 @@ body{
 #courses{
     background-color: var(--bool-lighter);
     padding: 2.5rem 0;
+
+    & .row{
+        gap: 2rem;
+    }
 }
 
 .intro{
-    padding-bottom: 1.5rem;
+    padding: 0.5rem 0;
 
     & h2{
         font-size: 1.5rem;
@@ -356,10 +360,23 @@ body{
             position: absolute;
             top: 0;
             left: 0;
-            font-size: 2.5rem;
+            font-size: 2.5rem;            
+            padding: 0.6rem;
+        }
+
+        & > .fa-code.accent{
             background-color: var(--bool-accent);
             color: var(--bool-btn-light);
-            padding: 0.6rem;
+        }
+
+        & > .fa-code.accent-reverse{
+            background-color: var(--bool-btn-light);
+            color: var(--bool-accent);
+        }
+
+        & .fa-chart-line{
+            background-color: var(--bool-light);
+            color: var(--bool-btn-dark);
         }
     }
 
@@ -653,8 +670,7 @@ body{
     /* courses */
 
     .intro{
-        font-size: 1.3rem; 
-        padding: 1.5rem 0 2rem 0;
+        font-size: 1.3rem;
     
         & > h2{
         font-size: 2.5rem;
