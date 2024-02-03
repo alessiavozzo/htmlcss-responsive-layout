@@ -45,9 +45,9 @@
     margin: 1rem 0;
 } */
 
-.debug .reason{
+/* .debug .reason{
     background-color: lightpink;
-}
+} */
 
 /* .debug #site_main *{
     border: 1px solid black;
@@ -60,13 +60,24 @@
 /* .debug #advisors *{
     border: 1px solid black;
 } */
-.debug #experiences *{
+/* .debug #experiences *{
     border: 1px solid black;
-}
+} */
 .debug #why-us *{
     border: 1px solid black;
 }
-
+.debug #moving-banner *{
+    border: 1px solid black;
+}
+.debug #fundamentals-camp *{
+    border: 1px solid black;
+}
+.debug #pick-a-course *{
+    border: 1px solid black;
+}
+.debug #site_footer *{
+    border: 1px solid black;
+}
 
 
 
@@ -493,13 +504,43 @@ body{
 
 /* #region experiences */
 
+#experiences{
+    background-color: var(--bool-lighter);
+    padding: 2rem 0;
+
+    & h3{
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+}
+
+.video-container {
+    justify-content: center;
+    padding: 1rem 0;
+    position: relative;
+
+    & .fa-play{
+        background-color: rgba(0, 0, 0, 0.212);
+        font-size: 3rem;
+        padding: 1.5rem;
+        border-radius: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
 .videos{
     justify-content: space-around;
+    display: none;
+    padding: 1.5rem 0;
 }
 
 .vid{
     width: calc(100% / 6);
     aspect-ratio: 4/5;
+    border: 1px solid black;
 
     & > iframe{
         width: 100%;
@@ -512,6 +553,13 @@ body{
     width: 100%;
     gap: 1rem;
     justify-content: center;
+    
+    & > i{
+        background-color: var(--bool-light);
+        color: var(--bool-banner);
+        font-size: 1.7rem;
+        padding: 1rem;
+    }
 }
 
 /* #endregion experiences */
@@ -779,6 +827,14 @@ body{
 
 
     /* experiences */
+
+    .videos{
+        display: flex;
+    }
+
+    .video-container{
+        display: none;
+    }
 
     .buttons{
         width: 95%;
