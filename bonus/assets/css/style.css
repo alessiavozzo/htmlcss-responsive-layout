@@ -31,9 +31,9 @@
 
 /* #region debug */
 
-.debug *{
+/* .debug *{
     border: 1px solid black;
-}
+} */
 
 .debug section{
     margin: 2rem 0;
@@ -45,6 +45,10 @@
 
 .debug .reason{
     background-color: lightpink;
+}
+
+.debug #site_main *{
+    border: 1px solid black;
 }
 
 
@@ -78,6 +82,16 @@ body{
     flex-wrap: wrap;
     width: 100%;
 }
+
+.btn{
+    color: var(--bool-lighter);
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.3rem;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
 
 /* [class^="col-"]{
     padding: 1rem;
@@ -119,6 +133,10 @@ body{
 
 #site_header{
     background-color: var(--bool-lighter);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 #navbar{
@@ -126,9 +144,55 @@ body{
     margin: auto;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 0;
 
     & .nav-center{
         display: none;
+
+        & .link{
+            text-decoration: none;
+            color: var(--bool-darker);
+        }
+
+        & i{
+            font-size: 0.7rem;
+        }
+    }
+}
+
+.nav-left{
+    width: 46px;
+
+    &  img:first-of-type{
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+    }
+
+    &  img:nth-of-type(2){
+        width: 100%;
+        display: none;
+    }
+}
+
+.nav-right{
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+
+    & > i{
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+}
+
+.nav-right .btn{
+    background-color: var(--bool-btn-light);
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    &:hover{
+        background-color: var(--bool-btn-dark);
     }
 }
 
@@ -138,6 +202,8 @@ body{
 /* #region jumbo */
 
 #jumbotron{
+    background-color: var(--bool-jumbo);
+    margin-top: 5rem;
 
 
     & .container{
@@ -320,6 +386,8 @@ body{
         max-width: 940px;
     }
 
+    /* header */
+
     #navbar{
         width: 90%;
 
@@ -329,6 +397,18 @@ body{
 
         & .nav-right > i{
             display: none;
+        }
+    }
+
+    .nav-left{
+        width: 140px;
+    
+        &  img:first-of-type{
+            display: none;
+        }
+    
+        &  img:nth-of-type(2){
+            display: block;
         }
     }
 
