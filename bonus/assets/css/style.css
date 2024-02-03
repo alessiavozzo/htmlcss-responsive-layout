@@ -35,9 +35,9 @@
     border: 1px solid black;
 } */
 
-.debug section{
+/* .debug section{
     margin: 2rem 0;
-}
+} */
 .debug .course-card{
     background-color: lightcyan;
     margin: 1rem 0;
@@ -47,7 +47,11 @@
     background-color: lightpink;
 }
 
-.debug #site_main *{
+/* .debug #site_main *{
+    border: 1px solid black;
+} */
+
+.debug #courses *{
     border: 1px solid black;
 }
 
@@ -62,6 +66,7 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
 }
 
 .list-inline{
@@ -214,12 +219,84 @@ body{
 .top-jumbo{
     width: 100%;
     flex-wrap: wrap;
+    text-align: center;
+
+    & .image{
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+        
+        & > img:first-child{
+            width: 50%;
+            object-fit: contain;
+        }
+
+        & > img:nth-child(2){
+            width: 100%;
+            display: none;
+        }
+    }
+
+    & .text{
+        padding: 1rem;
+    }
+    & h1{
+        color: var(--bool-title);
+        font-size: 2.4rem;
+        line-height: 2.7rem;
+        padding: 1rem 0;
+    }
+    
 }
 
-.bottom-jumbo{
-    width: 100%;
-    flex-wrap: wrap;
+.bottom-jumbo{   
+    
+    background-color: var(--bool-light);
+    
+
+    & > .container{
+        flex-wrap: wrap;
+        padding: 0.5rem 0;
+    }
+
+    & .students{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    & .feedback{
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    & .image{
+        width: 120px;
+        align-items: center;
+
+        & > img{
+            object-fit: contain;
+            width: 100%;
+        }
+    }
 }
+
+.circle-pics{ 
+    display: none;
+
+    & > img{
+    width: 45px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    
+        &:not(:first-child){
+        margin-left: -0.3rem;
+        }
+    }
+}
+
+
+
+
 
 /* #endregion jumbo */
 
@@ -412,6 +489,7 @@ body{
         }
     }
 
+        /* utility */
 
     .col-lg-8{
         width: calc((100% / 12) * 8);
@@ -430,10 +508,50 @@ body{
 
     .top-jumbo{
         flex-direction: row-reverse;
+        text-align: left;
+
+        & .text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1.3rem;
+            padding-right: 3.5rem;
+
+            & h1{
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+        }        
+
+        & .image{
+            padding: 0;
+
+            & > img:first-child{
+            display: none;
+            }
+
+            & > img:nth-child(2){
+                display: block;
+            } 
+        }
+
+        
     }
 
-    .bottom-jumbo{
+    #jumbotron .bottom-jumbo > .container{
         justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    .students{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: end;
+        justify-content: center;
+
+        & .circle-pics{
+            display: flex;
+        }
     }
 
 
