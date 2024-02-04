@@ -63,15 +63,15 @@
 /* .debug #experiences *{
     border: 1px solid black;
 } */
-.debug #why-us *{
+/* .debug #why-us *{
     border: 1px solid black;
-}
+} */
 .debug #moving-banner *{
     border: 1px solid black;
 }
-.debug #fundamentals-camp *{
+/* .debug #fundamentals-camp *{
     border: 1px solid black;
-}
+} */
 .debug #pick-a-course *{
     border: 1px solid black;
 }
@@ -566,6 +566,41 @@ body{
 
 /* #region why-us */
 
+#why-us{
+    background-color: var(--bool-lighter);
+    padding: 1.5rem 0 2rem 0;
+
+    & h2{
+        padding-bottom: 0.5rem;
+        font-size: 1.4rem;
+    }
+}
+
+.reason{
+    padding: 0.5rem 0;
+    align-items: center;
+
+    & h3{
+        font-size: 1.1rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    & p{
+        font-size: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    & i{
+        width: 10%;
+        font-size: 2rem;
+        color: var(--bool-banner);
+        padding-right: 1rem;
+        padding-left: 0.3rem;
+    }
+}
+
+
 
 
 /* #endregion why-us */
@@ -574,24 +609,43 @@ body{
 /* #region moving banner */
 
 #moving-banner{
+    gap: 1rem;
     background-color: var(--bool-banner);
+    color: #84a5fa;
+    font-size: 2rem;
+    padding: 2rem 0;
+    font-weight: 700;
+
+    & strong{
+        color: var(--bool-lighter);
+    }
+
+    & span{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+    }
 }
 
 /* .moving-text{
+    
+    overflow: hidden;
     animation: 6s linear infinite;
     animation-name: slide;
 
-    & > p{
-        white-space: nowrap;
+    & > span{
+        white-space: nowrap;      
+        
     }
-}
+} */
+
+
 
 @keyframes slide {
     from {transform: translateX(100%);}
 
     to {transform: translateX(-100%);}
-} */
-
+}
 
 
 
@@ -599,12 +653,54 @@ body{
 
 /* #region fundamentals camp */
 
+#fundamentals-camp{
+    padding: 2rem 0;
+
+    & span{
+        background-image: linear-gradient(to right, rgba(228, 252, 239, 1), rgba(207, 220, 248, 1));
+        padding: 0 0.5rem;
+    }
+
+    & h2{
+        padding-bottom: 0.5rem;
+    }
+
+    & .video-container{
+        padding: 1rem 0;
+
+        & > img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.try-boolean > p{
+    padding: 0.5rem 0 1rem 0
+}
+
+.try-boolean > .btn{
+    background-color: var(--bool-btn-dark);
+    text-align: center;
+    padding: 0.8rem;
+    width: 100%;
+
+    &:hover{
+        background-image: linear-gradient(to right, rgb(196, 247, 219), rgb(173, 196, 245), var(--bool-banner), var(--bool-btn-dark) );
+    }
+}
+
+
 
 /* #endregion fundamentals camp */
 
 
 /* #region pick-a-course */
 
+#pick-a-course{
+    background-color: var(--bool-light);
+}
 
 
 /* #endregion pick-a-course */
@@ -653,6 +749,19 @@ body{
         width: 70%;
         margin: auto;
         justify-content: flex-end;
+    }
+
+    .try-boolean{
+        padding: 1rem 0 1rem 1rem;
+        
+        & > .btn{
+            padding: 1.1rem;
+        }   
+        
+    }
+
+    #fundamentals-camp img{
+        padding: 0.5rem;        
     }
     
 }
@@ -839,6 +948,66 @@ body{
     .buttons{
         width: 95%;
     }
+
+
+
+    /* why-us */
+
+    #why-us{
+        padding-bottom: 3rem;
+
+        & h2{
+        font-size: xx-large;
+        padding-bottom: 2rem;
+        }
+
+        & h3{
+        font-size: larger;
+        }
+
+        & p{
+        font-size: 1.1rem;
+        } 
+        
+        & i{
+        font-size: 2.7rem;
+        width: 20%;
+        align-self: flex-start;
+        }
+    }
+
+
+    .reason{
+        padding-right: 1.5rem;
+    }
+
+
+    /* fundamentals */
+
+    #fundamentals-camp{
+        font-size: larger; 
+        padding-top: 3.5rem;
+    
+        & .video-container{
+        display: flex;
+        }
+        
+        & .text{
+            padding-bottom: 3rem;
+        }
+
+        & .try-boolean > p{
+            padding-bottom: 2rem;
+        }
+        
+        & .try-boolean > .btn{
+        width: auto;
+        }
+    }
+
+    
+
+
 
 
 
