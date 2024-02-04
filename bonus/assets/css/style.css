@@ -634,8 +634,7 @@ body{
     animation-name: slide;
 
     & > span{
-        white-space: nowrap;      
-        
+        white-space: nowrap;
     }
 } */
 
@@ -768,8 +767,7 @@ body{
 }
 
 .footer-top{
-    width: 100%;
-    position: relative;    
+    width: 100%;  
     background-color: var(--bool-btn-dark);    
     padding-top: 4rem;
 
@@ -780,9 +778,11 @@ body{
 
     & .adv-pic{
         padding: 2rem 0;
+        align-items: center;
 
         & > p{
             font-size: 0.9rem;
+            padding-left: 0.5rem;
         }
     }
     
@@ -790,6 +790,10 @@ body{
         color: var(--bool-lighter);
     }
         
+}
+
+.contact-us{
+    position: relative;
 }
 
 .contact-us h4{
@@ -865,10 +869,10 @@ body{
 
 hr{
     position: absolute;
-    right: 40%;
-    top: 35%;
-    transform: rotate(90deg);    
-    width: 35%;
+    right: -70%;
+    top: 50%;
+    transform: rotate(90deg);
+    width: 110%;
     background-color: var(--bool-footer);
     border: 1px solid var(--bool-footer);
     display: none;
@@ -896,6 +900,8 @@ hr{
         padding-top: 1.5rem;
     }
 }
+
+/* #endregion footer */
 
 
 
@@ -1254,6 +1260,7 @@ hr{
     }
     
     .privacy{
+        display: flex;
         justify-content: space-between;
         align-items: center;
 
@@ -1275,3 +1282,5 @@ hr{
 
 }
 
+
+/* #endregion media query */
